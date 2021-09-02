@@ -1,0 +1,17 @@
+{
+  "name": "fresh-dev-docs",
+  "version": "1.0.0",
+  "description": "documentation for telabot development",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cy56",
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "vuepress": "^1.8.2"
+  }
+}

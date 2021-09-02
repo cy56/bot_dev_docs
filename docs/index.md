@@ -1,0 +1,91 @@
+# 开发指南
+
+# 目录
+[[toc]]
+
+## 开始设置
+``` shell
+# 建立env 和 安装
+cp .env.example .env
+composer install
+
+# 建立key -- 如果需要
+php artisan key:generate
+
+# 建立表
+php artisan migrate
+php artisan admin:install
+
+# 建立基础数据
+php artisan db:seed
+```
+
+## 环境变量
+``` bash
+APP_NAME=Laravel
+APP_ENV=local
+APP_KEY=base64:GGJqjmPKE2RTlYev0JFbNLg9uHyPstWZ/dsP6E6m25c=
+APP_DEBUG=true
+APP_URL=http://localhost
+
+LOG_CHANNEL=stack
+LOG_LEVEL=debug
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=fresh
+DB_USERNAME=root
+DB_PASSWORD=
+
+BROADCAST_DRIVER=log
+CACHE_DRIVER=file
+FILESYSTEM_DRIVER=local
+QUEUE_CONNECTION=sync
+SESSION_DRIVER=file
+SESSION_LIFETIME=120
+
+MEMCACHED_HOST=127.0.0.1
+
+REDIS_CLIENT=predis
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+
+MAIL_MAILER=smtp
+MAIL_HOST=mailhog
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS=null
+MAIL_FROM_NAME="${APP_NAME}"
+
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_DEFAULT_REGION=us-east-1
+AWS_BUCKET=
+AWS_USE_PATH_STYLE_ENDPOINT=false
+
+PUSHER_APP_ID=
+PUSHER_APP_KEY=
+PUSHER_APP_SECRET=
+PUSHER_APP_CLUSTER=mt1
+
+MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+
+TELEGRAM_BOT_TOKEN=
+TELEGRAM_BOT_NAME=
+TELEGRAM_BOT_USERNAME=
+```
+
+::: warning 注意事项
+```TELEGRAM_BOT_TOKEN```
+
+```TELEGRAM_BOT_NAME```
+
+```TELEGRAM_BOT_USERNAME```
+
+以上的变量需要申请来获取 [telegram](/telegram/)
+:::
